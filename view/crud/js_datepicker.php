@@ -30,8 +30,10 @@ foreach ($input_types as $type => $shadow_format) {
             jQuery(this).val('');
             jQuery(this).datetimepicker({
 <?php
-    foreach ($data['params_datepicker_' . $type] as $param_key => $param_val) {
-        echo $param_key . ': ' . $param_val . ',' . PHP_EOL;
+    if (isset($data['params_datepicker_' . $type])) {
+        foreach ($data['params_datepicker_' . $type] as $param_key => $param_val) {
+            echo $param_key . ': ' . $param_val . ',' . PHP_EOL;
+        }
     }
 ?>
                 defaultDate: datevalue
