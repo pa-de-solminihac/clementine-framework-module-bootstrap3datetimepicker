@@ -22,9 +22,9 @@ class bootstrap3datetimepickerCrudController extends bootstrap3datetimepickerCru
         return $ret;
     }
 
-    public function register_ui_scripts($mode = 'index')
+    public function register_ui_scripts($mode = 'index', $params = null)
     {
-        $ret = parent::register_ui_scripts($mode);
+        $ret = parent::register_ui_scripts($mode, $params);
         $cssjs = $this->getModel('cssjs');
         if (in_array($mode, array('create', 'update'))) {
             $cssjs->register_css('bootstrap3datetimepicker', array(
