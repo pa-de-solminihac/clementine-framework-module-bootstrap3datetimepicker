@@ -7,6 +7,7 @@ class bootstrap3datetimepickerCrudController extends bootstrap3datetimepickerCru
         $this->data['params_datepicker_date'] = array(
             'locale' => "'fr'",
             'useCurrent' => 'false',
+            'extraFormats' => "['YYYY-MM-DD', 'DD/MM/YYYY']",
             'format' => "'DD/MM/YYYY'",
         );
         $this->data['params_datepicker_time'] = array(
@@ -17,6 +18,7 @@ class bootstrap3datetimepickerCrudController extends bootstrap3datetimepickerCru
         $this->data['params_datepicker_datetime'] = array(
             'locale' => "'fr'",
             'useCurrent' => 'false',
+            'extraFormats' => "['YYYY-MM-DD HH:mm', 'DD/MM/YYYY HH:mm']",
             'format' => "'DD/MM/YYYY HH:mm'",
         );
         return $ret;
