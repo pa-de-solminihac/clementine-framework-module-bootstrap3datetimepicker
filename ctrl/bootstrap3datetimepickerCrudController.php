@@ -27,7 +27,7 @@ class bootstrap3datetimepickerCrudController extends bootstrap3datetimepickerCru
     public function register_ui_scripts($mode = 'index', $params = null)
     {
         $ret = parent::register_ui_scripts($mode, $params);
-        $cssjs = $this->getModel('cssjs');
+        $cssjs = Clementine::getModel('cssjs');
         if (in_array($mode, array('create', 'update'))) {
             $cssjs->register_css('bootstrap3datetimepicker', array(
                 'src' => __WWW_ROOT_BOOTSTRAP3DATETIMEPICKER__ . '/skin/css/bootstrap-datetimepicker.min.css'

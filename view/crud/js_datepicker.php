@@ -1,6 +1,6 @@
 <?php
 $config = Clementine::$config['module_bootstrap3datetimepicker'];
-$this->getParentBlock($data, $request);
+Clementine::getParentBlock($data, $request);
 $input_types = array(
     'date'      => 'YYYY-MM-DD',
     'time'      => 'HH:mm',
