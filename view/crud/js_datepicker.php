@@ -44,7 +44,11 @@ foreach ($input_types as $type => $shadow_format) {
                 var value = '';
                 var moment = e.date;
                 value = '';
-                document.getElementById(el_id).setCustomValidity('');
+                try {
+                    document.getElementById(el_id).setCustomValidity('');
+                } catch (e) {
+                    // nothing
+                }
                 if (moment) {
                     value = moment.format(shadow_format);
                 }
