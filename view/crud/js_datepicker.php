@@ -21,7 +21,7 @@ foreach ($input_types as $type => $shadow_format) {
         var shadow_format = '<?php echo $shadow_format; ?>';
         var shadow_el = jQuery('#' + el_id + '-hidden');
         var shadow_el_val = shadow_el.val();
-        if (shadow_el_val != '' && shadow_el_val != '0000-00-00' && shadow_el_val != '0000-00-00 00:00' && shadow_el_val != '0000-00-00 00:00:00') {
+        if (shadow_el_val != undefined && shadow_el_val != '' && shadow_el_val != '0000-00-00' && shadow_el_val != '0000-00-00 00:00' && shadow_el_val != '0000-00-00 00:00:00') {
             datevalue = moment(shadow_el_val, shadow_format);
             datevalue_shadow_formatted = moment(datevalue).format(shadow_format);
         }
